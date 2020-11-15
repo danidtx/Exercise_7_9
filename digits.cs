@@ -4,30 +4,32 @@ class digits
 {
  static void Main()
  {
-	 //counters of number of digits a is for one digit, b is for 2 digits, c is for 3 digits and d is for more than 3 digits
-     int a = 0, b = 0, c = 0, d = 0;
+     int oneDig = 0, twoDig = 0, threeDig = 0, moreDig = 0;
       Console.Write("Insert a number: ");
+      
       // read the number as string to check the word "end"
-      string e = Console.ReadLine();
-     while(e!="end"){
-int input = Convert.ToInt32(e);
+      
+      string checkEnd = Console.ReadLine();
+      
+     while(checkEnd!="end"){
+int input = Convert.ToInt32(checkEnd);
        if(input != 0)
 {
        if(input/10 == 0)
-           a ++;  // it only has one digit
+           oneDig ++;  
        else 
        if (input/100 == 0)
-		b ++;  // the number has 2 digits
+		twoDig ++;  
         else
         if (input/1000 == 0)
-        c ++;  // the number has 3 digits
+        threeDig ++;  
         else
-           d++;  // the number has more than 3 digits
+           moreDig++;  
         }
-      e = Console.ReadLine();
+      checkEnd = Console.ReadLine();
 }
 
-Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", a, b, c, d); 
+Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", oneDig, twoDig, threeDig, moreDig); 
 
 
  }
